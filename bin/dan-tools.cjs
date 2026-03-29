@@ -57,6 +57,9 @@ function main() {
     case 'verify':
       require('./lib/verify.cjs').handle(cwd, subArgs, raw);
       break;
+    case 'milestone':
+      require('./lib/milestone.cjs').handle(cwd, subArgs, raw);
+      break;
     default:
       error(
         'Unknown command: ' + (command || '(none)') +
