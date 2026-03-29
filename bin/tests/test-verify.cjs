@@ -245,7 +245,7 @@ describe('verifyKeyLinks', () => {
       '    - from: "src/wired.cjs"',
       '      to: "src/bar.cjs"',
       '      via: "require"',
-      '      pattern: "require.*bar\\\\.cjs.*\\\\.handle"',
+      '      pattern: "require.*bar\\.cjs.*\\.handle"',
       '---',
       '# Plan',
     ].join('\n');
