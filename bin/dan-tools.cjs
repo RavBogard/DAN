@@ -51,11 +51,14 @@ function main() {
     case 'qualify':
       require('./lib/qualify.cjs').handle(cwd, subArgs, raw);
       break;
+    case 'research':
+      require('./lib/research.cjs').handle(cwd, subArgs, raw);
+      break;
     default:
       error(
         'Unknown command: ' + (command || '(none)') +
         '\nUsage: dan-tools.cjs <command> [args]\n' +
-        'Commands: state, config, commit, frontmatter, template, dependency, phase, lifecycle, qualify'
+        'Commands: state, config, commit, frontmatter, template, dependency, phase, lifecycle, qualify, research'
       );
   }
 }
