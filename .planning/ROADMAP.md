@@ -62,12 +62,12 @@ Plans:
   2. Research terminates autonomously -- either when gap count trends to zero, confidence reaches HIGH across all dimensions, or hard cap of 4 passes is reached (no infinite loops)
   3. `/dan:discuss` runs an interactive interview that surfaces decisions, tradeoffs, and assumptions, and captures them in a structured CONTEXT.md decision log
   4. A second research pass only re-researches identified gaps (not the full domain), demonstrating diminishing returns detection
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
-- [ ] 03-03: TBD
+- [ ] 03-01-PLAN.md — Research CLI module (init, record-pass, check-convergence, status) with tests and router wiring
+- [ ] 03-02-PLAN.md — dan:research skill execution_flow with recursive loop, researcher and synthesizer agent enhancements
+- [ ] 03-03-PLAN.md — dan:discuss skill execution_flow with interactive interview protocol and CONTEXT.md output
 
 ### Phase 4: Verification and Quality
 **Goal**: After any plan executes, DAN can autonomously verify deliverables against acceptance criteria and recursively sweep for bugs until clean
