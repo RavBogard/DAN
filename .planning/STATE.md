@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 04-01-PLAN.md (Verify CLI module)
-last_updated: "2026-03-29T16:29:23.000Z"
-last_activity: 2026-03-29 -- Completed plan 04-01 verify CLI module
+stopped_at: Completed 04-02-PLAN.md (Skill and agent enhancement)
+last_updated: "2026-03-29T16:36:18.000Z"
+last_activity: 2026-03-29 -- Completed plan 04-02 skill and agent enhancement
 progress:
   total_phases: 5
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 12
-  completed_plans: 11
-  percent: 92
+  completed_plans: 12
+  percent: 100
 ---
 
 # Project State
@@ -26,18 +26,18 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 4 of 5 (Verification and Quality)
-Plan: 1 of 2 in current phase
-Status: Executing Phase 4
-Last activity: 2026-03-29 -- Completed plan 04-01 verify CLI module
+Plan: 2 of 2 in current phase
+Status: Phase 4 complete
+Last activity: 2026-03-29 -- Completed plan 04-02 skill and agent enhancement
 
-Progress: [█████████.] 92%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
-- Average duration: 3.5min
-- Total execution time: 0.67 hours
+- Total plans completed: 12
+- Average duration: 3.4min
+- Total execution time: 0.72 hours
 
 **By Phase:**
 
@@ -46,11 +46,11 @@ Progress: [█████████.] 92%
 | 1-Foundation | 3 | 13min | 4.3min |
 | 2-Core Loop | 3 | 10min | 3.3min |
 | 3-Research System | 3 | 7min | 2.3min |
-| 4-Verification | 1 | 7min | 7min |
+| 4-Verification | 2 | 11min | 5.5min |
 
 **Recent Trend:**
-- Last 5 plans: 3min, 3min, 2min, 3min, 7min
-- Trend: stable (04-01 larger scope with TDD)
+- Last 5 plans: 3min, 2min, 3min, 7min, 4min
+- Trend: stable
 
 *Updated after each plan completion*
 
@@ -96,6 +96,9 @@ Recent decisions affecting current work:
 - [04-01]: Custom must_haves YAML parser in verify.cjs (frontmatter.cjs cannot handle arrays-of-objects)
 - [04-01]: 50% recurring ratio threshold for bugsweep escalation (hard-coded, configurable later if needed)
 - [04-01]: Fingerprint normalization: lowercase, strip line numbers, normalize whitespace, normalize string literals
+- [04-02]: Verify skill references CLI tools for all deterministic checks (no inline verification logic in agent prompts)
+- [04-02]: Bugsweep loop orchestrated at skill level, not agent level (two-level hierarchy rule)
+- [04-02]: Verifier includes stub detection patterns (TODO, TBD, hardcoded returns, trivially small files)
 
 ### Pending Todos
 
@@ -110,5 +113,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-29
-Stopped at: Completed 04-01-PLAN.md (Verify CLI module)
+Stopped at: Completed 04-02-PLAN.md (Skill and agent enhancement)
 Resume file: None
