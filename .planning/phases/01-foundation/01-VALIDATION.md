@@ -19,16 +19,16 @@ created: 2026-03-28
 |----------|-------|
 | **Framework** | Node.js built-in test runner (node:test + node:assert) |
 | **Config file** | none — Wave 0 installs |
-| **Quick run command** | `node --test tests/` |
-| **Full suite command** | `node --test tests/` |
+| **Quick run command** | `node --test bin/tests/` |
+| **Full suite command** | `node --test bin/tests/` |
 | **Estimated runtime** | ~5 seconds |
 
 ---
 
 ## Sampling Rate
 
-- **After every task commit:** Run `node --test tests/`
-- **After every plan wave:** Run `node --test tests/`
+- **After every task commit:** Run `node --test bin/tests/`
+- **After every plan wave:** Run `node --test bin/tests/`
 - **Before `/gsd:verify-work`:** Full suite must be green
 - **Max feedback latency:** 5 seconds
 
@@ -38,17 +38,17 @@ created: 2026-03-28
 
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|-----------|-------------------|-------------|--------|
-| 1-01-01 | 01 | 1 | FOUND-01 | unit | `node --test tests/cli-state.test.cjs` | ❌ W0 | ⬜ pending |
-| 1-01-02 | 01 | 1 | FOUND-02 | unit | `node --test tests/cli-template.test.cjs` | ❌ W0 | ⬜ pending |
-| 1-01-03 | 01 | 1 | FOUND-03 | unit | `node --test tests/cli-git.test.cjs` | ❌ W0 | ⬜ pending |
-| 1-01-04 | 01 | 1 | FOUND-04 | unit | `node --test tests/cli-deps.test.cjs` | ❌ W0 | ⬜ pending |
-| 1-02-01 | 02 | 1 | FOUND-05 | unit | `node --test tests/state-schema.test.cjs` | ❌ W0 | ⬜ pending |
-| 1-02-02 | 02 | 1 | FOUND-06 | unit | `node --test tests/state-schema.test.cjs` | ❌ W0 | ⬜ pending |
-| 1-02-03 | 02 | 1 | FOUND-10 | unit | `node --test tests/state-progress.test.cjs` | ❌ W0 | ⬜ pending |
-| 1-02-04 | 02 | 1 | FOUND-11 | unit | `node --test tests/config.test.cjs` | ❌ W0 | ⬜ pending |
+| 1-01-01 | 01 | 1 | FOUND-01 | unit | `node --test bin/tests/test-core.cjs` | ❌ W0 | ⬜ pending |
+| 1-01-02 | 01 | 1 | FOUND-03 | unit | `node --test bin/tests/test-state.cjs` | ❌ W0 | ⬜ pending |
+| 1-01-03 | 01 | 1 | FOUND-05 | unit | `node --test bin/tests/test-frontmatter.cjs` | ❌ W0 | ⬜ pending |
+| 1-01-04 | 01 | 1 | FOUND-06 | unit | `node --test bin/tests/test-config.cjs` | ❌ W0 | ⬜ pending |
+| 1-01-05 | 01 | 1 | FOUND-11 | unit | `node --test bin/tests/test-commit.cjs` | ❌ W0 | ⬜ pending |
+| 1-02-01 | 02 | 2 | FOUND-02 | unit | `node --test bin/tests/test-template.cjs` | ❌ W0 | ⬜ pending |
+| 1-02-02 | 02 | 2 | FOUND-04 | unit | `node --test bin/tests/test-dependency.cjs` | ❌ W0 | ⬜ pending |
+| 1-02-03 | 02 | 2 | FOUND-10 | unit | `node --test bin/tests/test-phase.cjs` | ❌ W0 | ⬜ pending |
 | 1-03-01 | 03 | 2 | FOUND-07 | manual | Verify skills discoverable via `/dan:` | ❌ | ⬜ pending |
-| 1-03-02 | 03 | 2 | FOUND-08 | manual | Verify agent spawning works | ❌ | ⬜ pending |
-| 1-03-03 | 03 | 2 | FOUND-09 | integration | Verify two-level hierarchy enforcement | ❌ | ⬜ pending |
+| 1-04-01 | 04 | 2 | FOUND-08 | manual | Verify agent spawning works | ❌ | ⬜ pending |
+| 1-04-02 | 04 | 2 | FOUND-09 | integration | Verify two-level hierarchy enforcement | ❌ | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -56,14 +56,15 @@ created: 2026-03-28
 
 ## Wave 0 Requirements
 
-- [ ] `tests/` directory created
-- [ ] `tests/cli-state.test.cjs` — stubs for FOUND-01 (atomic state read/write)
-- [ ] `tests/cli-template.test.cjs` — stubs for FOUND-02 (template filling)
-- [ ] `tests/cli-git.test.cjs` — stubs for FOUND-03 (atomic git commits)
-- [ ] `tests/cli-deps.test.cjs` — stubs for FOUND-04 (dependency analysis)
-- [ ] `tests/state-schema.test.cjs` — stubs for FOUND-05, FOUND-06 (state schemas)
-- [ ] `tests/state-progress.test.cjs` — stubs for FOUND-10 (progress tracking)
-- [ ] `tests/config.test.cjs` — stubs for FOUND-11 (config management)
+- [ ] `bin/tests/` directory created
+- [ ] `bin/tests/test-core.cjs` — stubs for core utilities (atomicWriteFileSync, output, execGit)
+- [ ] `bin/tests/test-state.cjs` — stubs for FOUND-01 (atomic state read/write)
+- [ ] `bin/tests/test-frontmatter.cjs` — stubs for FOUND-05 (frontmatter parse/serialize)
+- [ ] `bin/tests/test-config.cjs` — stubs for FOUND-06, FOUND-11 (config management)
+- [ ] `bin/tests/test-commit.cjs` — stubs for FOUND-03 (atomic git commits)
+- [ ] `bin/tests/test-template.cjs` — stubs for FOUND-02 (template filling)
+- [ ] `bin/tests/test-dependency.cjs` — stubs for FOUND-04 (dependency analysis)
+- [ ] `bin/tests/test-phase.cjs` — stubs for FOUND-10 (progress tracking)
 
 ---
 

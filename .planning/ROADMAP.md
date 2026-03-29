@@ -28,12 +28,13 @@ DAN builds from the ground up: state schemas and CLI tools first (everything rea
   3. Agent definitions exist under `.claude/agents/` with appropriate tool restrictions, and spawning an agent from a skill works while spawning an agent from another agent is architecturally prevented
   4. `.planning/` directory contains valid STATE.md, PROJECT.md, ROADMAP.md, and dan.config.json with defined schemas, all human-readable and git-trackable
   5. Progress updates via CLI tools are reflected immediately in STATE.md with correct phase/plan position
-**Plans**: 3 plans
+**Plans**: 4 plans
 
 Plans:
 - [ ] 01-01-PLAN.md — CLI tools foundation: dan-tools.cjs router, core utilities, state/config/frontmatter/commit modules
 - [ ] 01-02-PLAN.md — Template filling, dependency analysis, phase operations, and progress tracking
-- [ ] 01-03-PLAN.md — Skill entry points (12), agent definitions (7), and shared workflow skill
+- [ ] 01-03-PLAN.md — Skill entry points (12) and shared workflow skill
+- [ ] 01-04-PLAN.md — Agent definitions (7) with tool restrictions and two-level hierarchy
 
 ### Phase 2: Core Loop
 **Goal**: A user can run the full Plan-Apply-Unify cycle on real code, with independent qualification of every task and mandatory loop closure
@@ -106,7 +107,7 @@ Phases execute in numeric order. Phases 2 and 3 can execute in parallel (indepen
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Not started | - |
+| 1. Foundation | 0/4 | Not started | - |
 | 2. Core Loop | 0/3 | Not started | - |
 | 3. Research System | 0/3 | Not started | - |
 | 4. Verification and Quality | 0/2 | Not started | - |
