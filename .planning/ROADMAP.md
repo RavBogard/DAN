@@ -93,12 +93,12 @@ Plans:
   3. `/dan:pause` saves current position and context to STATE.md; `/dan:resume` restores full context and continues from exactly where it stopped -- no human re-explanation needed
   4. `/dan:status` shows current progress, phase position, and suggests the next action
   5. If a phase fails mid-milestone, DAN captures failure context and can retry or escalate without losing progress on completed phases
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 05-01: TBD
-- [ ] 05-02: TBD
-- [ ] 05-03: TBD
+- [ ] 05-01-PLAN.md — Milestone and session CLI modules (milestone.cjs, session.cjs) with TDD tests and router wiring
+- [ ] 05-02-PLAN.md — dan:milestone and dan:status skill execution_flows with pipeline chaining and progress display
+- [ ] 05-03-PLAN.md — dan:pause and dan:resume skill execution_flows with session persistence
 
 ## Progress
 
