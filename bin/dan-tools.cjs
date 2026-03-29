@@ -36,11 +36,17 @@ function main() {
     case 'frontmatter':
       require('./lib/frontmatter.cjs').handle(cwd, subArgs, raw);
       break;
+    case 'template':
+      require('./lib/template.cjs').handle(cwd, subArgs, raw);
+      break;
+    case 'dependency':
+      require('./lib/dependency.cjs').handle(cwd, subArgs, raw);
+      break;
     default:
       error(
         'Unknown command: ' + (command || '(none)') +
         '\nUsage: dan-tools.cjs <command> [args]\n' +
-        'Commands: state, config, commit, frontmatter'
+        'Commands: state, config, commit, frontmatter, template, dependency'
       );
   }
 }
