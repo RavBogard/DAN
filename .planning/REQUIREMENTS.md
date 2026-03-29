@@ -39,13 +39,13 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **LOOP-02**: Plans are sized for single context window (2-3 tasks per plan)
 - [ ] **LOOP-03**: `/dan:apply` executes plan tasks with fresh-context executor agent
 - [ ] **LOOP-04**: Execute/Qualify separation — independent qualifier agent re-reads output and grades against acceptance criteria
-- [ ] **LOOP-05**: Four-status task reporting: PASS, PASS_WITH_CONCERNS, NEEDS_REVISION, FAIL
-- [ ] **LOOP-06**: Qualifier triggers fix loop on NEEDS_REVISION (max 3 attempts before escalation)
+- [x] **LOOP-05**: Four-status task reporting: PASS, PASS_WITH_CONCERNS, NEEDS_REVISION, FAIL
+- [x] **LOOP-06**: Qualifier triggers fix loop on NEEDS_REVISION (max 3 attempts before escalation)
 - [ ] **LOOP-07**: `/dan:unify` creates SUMMARY.md documenting what was built, comparing plan vs actual
 - [ ] **LOOP-08**: Mandatory loop closure — every PLAN gets a SUMMARY, no orphan plans ever
-- [ ] **LOOP-09**: Plan lifecycle states: DRAFT → APPROVED → IN_PROGRESS → COMPLETED/ABANDONED
+- [x] **LOOP-09**: Plan lifecycle states: DRAFT → APPROVED → IN_PROGRESS → COMPLETED/ABANDONED
 - [ ] **LOOP-10**: Atomic task checkpointing — task status saved to state after each completion
-- [ ] **LOOP-11**: Diagnostic failure routing — classify root cause (intent vs spec vs code) before applying fix
+- [x] **LOOP-11**: Diagnostic failure routing — classify root cause (intent vs spec vs code) before applying fix
 
 ### Verification & Quality
 
@@ -126,13 +126,13 @@ Deferred to future release. Tracked but not in current roadmap.
 | LOOP-02 | Phase 2 | Pending |
 | LOOP-03 | Phase 2 | Pending |
 | LOOP-04 | Phase 2 | Pending |
-| LOOP-05 | Phase 2 | Pending |
-| LOOP-06 | Phase 2 | Pending |
+| LOOP-05 | Phase 2 | Complete |
+| LOOP-06 | Phase 2 | Complete |
 | LOOP-07 | Phase 2 | Pending |
 | LOOP-08 | Phase 2 | Pending |
-| LOOP-09 | Phase 2 | Pending |
+| LOOP-09 | Phase 2 | Complete |
 | LOOP-10 | Phase 2 | Pending |
-| LOOP-11 | Phase 2 | Pending |
+| LOOP-11 | Phase 2 | Complete |
 | RSRCH-01 | Phase 3 | Pending |
 | RSRCH-02 | Phase 3 | Pending |
 | RSRCH-03 | Phase 3 | Pending |
