@@ -39,10 +39,10 @@ created: 2026-03-29
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | Status |
 |---------|------|------|-------------|-----------|-------------------|--------|
 | 3-01-01 | 01 | 1 | RSRCH-02, RSRCH-05, RSRCH-06 | unit | `node --test bin/tests/test-research.cjs` | ⬜ pending |
-| 3-01-02 | 01 | 1 | RSRCH-02, RSRCH-05, RSRCH-06 | integration | `node bin/dan-tools.cjs research status && node --test bin/tests/` | ⬜ pending |
+| 3-01-02 | 01 | 1 | RSRCH-02, RSRCH-05, RSRCH-06 | integration | `node bin/dan-tools.cjs research init project --cwd "." 2>&1 \| grep -q "target" && node --test bin/tests/` | ⬜ pending |
 | 3-02-01 | 02 | 2 | RSRCH-01, RSRCH-03, RSRCH-04 | grep | `grep -q "spawn_researchers" .claude/skills/dan-research/SKILL.md && grep -q "convergence_check" .claude/skills/dan-research/SKILL.md` | ⬜ pending |
 | 3-02-02 | 02 | 2 | RSRCH-03, RSRCH-04, RSRCH-09 | grep | `grep -q "Research Findings" .claude/agents/dan-researcher.md && grep -q "Confidence Assessment" .claude/agents/dan-synthesizer.md` | ⬜ pending |
-| 3-03-01 | 03 | 2 | RSRCH-07, RSRCH-08 | grep | `grep -q "gray_area" .claude/skills/dan-discuss/SKILL.md && grep -q "write_context" .claude/skills/dan-discuss/SKILL.md` | ⬜ pending |
+| 3-03-01 | 03 | 1 | RSRCH-07, RSRCH-08 | grep | `grep -q "gray_area" .claude/skills/dan-discuss/SKILL.md && grep -q "write_context" .claude/skills/dan-discuss/SKILL.md` | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
