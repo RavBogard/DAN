@@ -109,6 +109,6 @@ Phases execute in numeric order. Phases 2 and 3 can execute in parallel (indepen
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete | 2026-03-29 |
 | 2. Core Loop | 3/3 | Complete | 2026-03-29 |
-| 3. Research System | 0/3 | Not started | - |
+| 3. Research System | 2/3 | In Progress|  |
 | 4. Verification and Quality | 0/2 | Not started | - |
 | 5. Autonomy and Execution | 0/3 | Not started | - |

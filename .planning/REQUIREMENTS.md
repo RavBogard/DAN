@@ -24,11 +24,11 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Research System
 
 - [ ] **RSRCH-01**: `/dan:research` runs recursive multi-pass research (research → synthesize → find gaps → research again)
-- [ ] **RSRCH-02**: Research system has hard iteration cap (max 4 passes) with diminishing returns detection
+- [x] **RSRCH-02**: Research system has hard iteration cap (max 4 passes) with diminishing returns detection
 - [ ] **RSRCH-03**: Each research pass spawns parallel researcher agents (stack, features, architecture, pitfalls)
 - [ ] **RSRCH-04**: Synthesizer agent merges findings into SUMMARY.md with confidence assessments and gap identification
-- [ ] **RSRCH-05**: Gap detection drives subsequent research passes — only unresolved gaps get re-researched
-- [ ] **RSRCH-06**: Research terminates when gap count trends to zero or confidence reaches HIGH across all dimensions
+- [x] **RSRCH-05**: Gap detection drives subsequent research passes — only unresolved gaps get re-researched
+- [x] **RSRCH-06**: Research terminates when gap count trends to zero or confidence reaches HIGH across all dimensions
 - [ ] **RSRCH-07**: `/dan:discuss` runs deep interview phase that surfaces decisions, tradeoffs, and assumptions
 - [ ] **RSRCH-08**: Discuss phase captures structured decision log in CONTEXT.md per phase
 - [ ] **RSRCH-09**: Project-level init research runs 4 parallel researchers (same as GSD pattern)
@@ -134,11 +134,11 @@ Deferred to future release. Tracked but not in current roadmap.
 | LOOP-10 | Phase 2 | Complete |
 | LOOP-11 | Phase 2 | Complete |
 | RSRCH-01 | Phase 3 | Pending |
-| RSRCH-02 | Phase 3 | Pending |
+| RSRCH-02 | Phase 3 | Complete |
 | RSRCH-03 | Phase 3 | Pending |
 | RSRCH-04 | Phase 3 | Pending |
-| RSRCH-05 | Phase 3 | Pending |
-| RSRCH-06 | Phase 3 | Pending |
+| RSRCH-05 | Phase 3 | Complete |
+| RSRCH-06 | Phase 3 | Complete |
 | RSRCH-07 | Phase 3 | Pending |
 | RSRCH-08 | Phase 3 | Pending |
 | RSRCH-09 | Phase 3 | Pending |
