@@ -77,11 +77,11 @@ Plans:
   1. `/dan:verify` checks deliverables against phase goals and acceptance criteria without human intervention, writing results to VERIFICATION.md with pass/fail per criterion
   2. `/dan:bugsweep` finds issues, fixes them, re-verifies, and loops -- terminating when all checks pass or after max 3 cycles (whichever comes first)
   3. If bugsweep detects the same issues recurring across cycles, it stops and escalates to the user instead of looping forever
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
+- [ ] 04-01-PLAN.md — Verify CLI module (artifact, key-link, phase-completeness checks, issue fingerprinting, report formatting) with tests and router wiring
+- [ ] 04-02-PLAN.md — dan:verify and dan:bugsweep skill execution_flows with verifier and auditor agent enhancements
 
 ### Phase 5: Autonomy and Execution
 **Goal**: User approves scope once, then DAN chains the entire pipeline (research through bugsweep) across all phases in a milestone without human intervention
