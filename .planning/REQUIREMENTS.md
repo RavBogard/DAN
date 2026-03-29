@@ -49,12 +49,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Verification & Quality
 
-- [ ] **QUAL-01**: `/dan:verify` runs verifier agent that checks deliverables against phase goals and acceptance criteria
+- [x] **QUAL-01**: `/dan:verify` runs verifier agent that checks deliverables against phase goals and acceptance criteria
 - [ ] **QUAL-02**: Verification is automated — no human intervention required
 - [ ] **QUAL-03**: `/dan:bugsweep` runs recursive audit loop: find issues → fix → re-verify → loop until clean
-- [ ] **QUAL-04**: Bugsweep has hard iteration cap (max 3 cycles) with escalation to human if issues persist
-- [ ] **QUAL-05**: Bugsweep uses diminishing returns detection — if same issues recur, stop and escalate
-- [ ] **QUAL-06**: Verification results written to phase VERIFICATION.md with pass/fail per acceptance criterion
+- [x] **QUAL-04**: Bugsweep has hard iteration cap (max 3 cycles) with escalation to human if issues persist
+- [x] **QUAL-05**: Bugsweep uses diminishing returns detection — if same issues recur, stop and escalate
+- [x] **QUAL-06**: Verification results written to phase VERIFICATION.md with pass/fail per acceptance criterion
 
 ### Autonomy & Execution
 
@@ -142,12 +142,12 @@ Deferred to future release. Tracked but not in current roadmap.
 | RSRCH-07 | Phase 3 | Complete |
 | RSRCH-08 | Phase 3 | Complete |
 | RSRCH-09 | Phase 3 | Pending |
-| QUAL-01 | Phase 4 | Pending |
+| QUAL-01 | Phase 4 | Complete |
 | QUAL-02 | Phase 4 | Pending |
 | QUAL-03 | Phase 4 | Pending |
-| QUAL-04 | Phase 4 | Pending |
-| QUAL-05 | Phase 4 | Pending |
-| QUAL-06 | Phase 4 | Pending |
+| QUAL-04 | Phase 4 | Complete |
+| QUAL-05 | Phase 4 | Complete |
+| QUAL-06 | Phase 4 | Complete |
 | AUTO-01 | Phase 5 | Pending |
 | AUTO-02 | Phase 5 | Pending |
 | AUTO-03 | Phase 5 | Pending |

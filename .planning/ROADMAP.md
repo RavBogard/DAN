@@ -80,7 +80,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Verify CLI module (artifact, key-link, phase-completeness checks, issue fingerprinting, report formatting) with tests and router wiring
+- [x] 04-01-PLAN.md — Verify CLI module (artifact, key-link, phase-completeness checks, issue fingerprinting, report formatting) with tests and router wiring
 - [ ] 04-02-PLAN.md — dan:verify and dan:bugsweep skill execution_flows with verifier and auditor agent enhancements
 
 ### Phase 5: Autonomy and Execution
@@ -110,5 +110,5 @@ Phases execute in numeric order. Phases 2 and 3 can execute in parallel (indepen
 | 1. Foundation | 4/4 | Complete | 2026-03-29 |
 | 2. Core Loop | 3/3 | Complete | 2026-03-29 |
 | 3. Research System | 3/3 | Complete | 2026-03-29 |
-| 4. Verification and Quality | 0/2 | Not started | - |
+| 4. Verification and Quality | 1/2 | In progress | - |
 | 5. Autonomy and Execution | 0/3 | Not started | - |
