@@ -46,12 +46,12 @@ Plans:
   3. When qualifier returns NEEDS_REVISION, the system automatically retries (up to 3 attempts) before escalating; FAIL tasks escalate immediately
   4. `/dan:unify` creates a SUMMARY.md that documents what was built vs what was planned, and every plan that reaches IN_PROGRESS eventually gets a SUMMARY (no orphan plans)
   5. When a task fails, diagnostic routing classifies the root cause as intent, spec, or code issue before any fix is attempted
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md — Lifecycle state machine and qualifier output parser modules with CLI integration and tests
+- [ ] 02-02-PLAN.md — dan:plan and dan:unify skill workflows with planner agent enhancement
+- [ ] 02-03-PLAN.md — dan:apply skill workflow with E/Q loop, executor and qualifier agent enhancements
 
 ### Phase 3: Research System
 **Goal**: DAN can recursively research a problem domain until confident, and surface all decisions/tradeoffs through structured discussion before any planning begins
