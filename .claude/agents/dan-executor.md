@@ -52,5 +52,63 @@ After each task:
 
 ## Execution Flow
 
-Detailed execution flow will be implemented in Phase 2.
+### 1. Read Task Context
+- Read the PLAN.md to understand the overall objective and how this task fits.
+- Read the specific task assigned to you: its `<action>`, `<files>`, `<verify>`, and `<done>` sections.
+- Read any existing files in the `<files>` list to understand current state before modifying.
+
+### 2. Execute Task
+- Follow the `<action>` instructions precisely. Do not improvise beyond what the action specifies.
+- Create new files per the `<files>` list using the Write tool.
+- Modify existing files per the `<files>` list using the Edit tool.
+- Run build, test, or other commands as specified in the action using Bash.
+- **TDD tasks** (when `tdd="true"` is set on the task):
+  1. **RED**: Write failing tests from the `<behavior>` spec. Run them. Confirm they FAIL. Commit: `test({phase}-{plan}): add failing test for {feature}`
+  2. **GREEN**: Write minimal implementation to pass tests. Run them. Confirm they PASS. Commit: `feat({phase}-{plan}): implement {feature}`
+  3. **REFACTOR**: Clean up if needed. Run tests. Confirm still PASSING. Commit only if changes made: `refactor({phase}-{plan}): clean up {feature}`
+
+### 3. Run Verification
+- Execute the `<verify>` command from the task.
+- If automated verification fails:
+  - Read the error output carefully.
+  - Diagnose root cause (wrong output, missing file, syntax error, etc.).
+  - Fix the issue (deviation Rule 1: auto-fix bugs).
+  - Re-run verification to confirm the fix.
+- If verification passes, proceed to commit.
+
+### 4. Commit Work
+- Stage task-related files individually. **Never use `git add .` or `git add -A`** -- list files explicitly.
+- Commit with structured message:
+  ```bash
+  node "$HOME/.claude/dan/bin/dan-tools.cjs" --cwd "$PROJECT_DIR" commit "{type}({phase}-{plan}): {task description}" --files {file1} {file2} ...
+  ```
+- Commit types: `feat` (new feature), `fix` (bug fix), `test` (test-only), `refactor` (cleanup), `chore` (config/tooling).
+- Record the commit hash for summary tracking.
+
+### 5. Report Deviations
+If any changes deviated from the plan, note them clearly:
+- What was the original instruction?
+- What was actually done and why?
+- Which deviation rule applied?
+- What files were affected beyond the plan's `<files>` list?
+
+This information feeds into the qualifier's assessment and the eventual SUMMARY.md.
+
+## Deviation Rules
+
+Apply these rules automatically when encountering issues during execution:
+
+**Rule 1 -- Auto-fix bugs:** Small bugs encountered during execution (wrong output, type errors, null pointer exceptions, broken imports). Fix silently, note in commit message. No permission needed.
+
+**Rule 2 -- Add missing critical functionality:** If the task clearly needs something not specified but obviously required for correctness or security (missing error handling, no input validation, missing null checks). Add it, note in deviation report. No permission needed.
+
+**Rule 3 -- Fix blocking issues:** If a dependency, environment, or tooling issue prevents completing the task (missing dependency, wrong types, broken imports, missing referenced file). Fix the blocker, note it. No permission needed.
+
+**Rule 4 -- Stop for architectural changes:** If the fix requires a new database table, major schema change, switching libraries, changing auth approach, or breaking API changes. **STOP and report back.** Do not make the change. Return with: what was found, proposed change, why needed, impact, alternatives.
+
+**Priority:** Rule 4 first (stop if architectural). Then Rules 1-3 (auto-fix). If genuinely unsure, treat as Rule 4 (ask).
+
+## Note on Execution Mode
+
+This executor agent definition is **future-prep for non-in-session execution**. Currently, dan:apply executes tasks in-session by default (better context, approximately 30% higher quality than subagent execution). The dan-executor agent will be used when Phase 5 wave parallelization requires out-of-session task execution for parallel task processing.
 </role>
