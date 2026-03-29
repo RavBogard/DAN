@@ -23,15 +23,15 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Research System
 
-- [ ] **RSRCH-01**: `/dan:research` runs recursive multi-pass research (research → synthesize → find gaps → research again)
+- [x] **RSRCH-01**: `/dan:research` runs recursive multi-pass research (research → synthesize → find gaps → research again)
 - [x] **RSRCH-02**: Research system has hard iteration cap (max 4 passes) with diminishing returns detection
-- [ ] **RSRCH-03**: Each research pass spawns parallel researcher agents (stack, features, architecture, pitfalls)
-- [ ] **RSRCH-04**: Synthesizer agent merges findings into SUMMARY.md with confidence assessments and gap identification
+- [x] **RSRCH-03**: Each research pass spawns parallel researcher agents (stack, features, architecture, pitfalls)
+- [x] **RSRCH-04**: Synthesizer agent merges findings into SUMMARY.md with confidence assessments and gap identification
 - [x] **RSRCH-05**: Gap detection drives subsequent research passes — only unresolved gaps get re-researched
 - [x] **RSRCH-06**: Research terminates when gap count trends to zero or confidence reaches HIGH across all dimensions
 - [x] **RSRCH-07**: `/dan:discuss` runs deep interview phase that surfaces decisions, tradeoffs, and assumptions
 - [x] **RSRCH-08**: Discuss phase captures structured decision log in CONTEXT.md per phase
-- [ ] **RSRCH-09**: Project-level init research runs 4 parallel researchers (same as GSD pattern)
+- [x] **RSRCH-09**: Project-level init research runs 4 parallel researchers (same as GSD pattern)
 
 ### Core Loop
 

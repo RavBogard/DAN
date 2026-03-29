@@ -12,7 +12,7 @@ DAN builds from the ground up: state schemas and CLI tools first (everything rea
 
 - [ ] **Phase 1: Foundation** - State schemas, CLI tools, skill/agent scaffolding, and two-level architecture
 - [x] **Phase 2: Core Loop** - Plan-Apply-Unify workflow with E/Q separation and diagnostic routing
-- [ ] **Phase 3: Research System** - Recursive multi-pass research, discuss phase, and decision logging
+- [x] **Phase 3: Research System** - Recursive multi-pass research, discuss phase, and decision logging
 - [ ] **Phase 4: Verification and Quality** - Autonomous verify and recursive bugsweep with circuit breakers
 - [ ] **Phase 5: Autonomy and Execution** - Milestone chaining, wave parallelization, session management
 
@@ -66,7 +66,7 @@ Plans:
 
 Plans:
 - [x] 03-01-PLAN.md — Research CLI module (init, record-pass, check-convergence, status) with tests and router wiring
-- [ ] 03-02-PLAN.md — dan:research skill execution_flow with recursive loop, researcher and synthesizer agent enhancements
+- [x] 03-02-PLAN.md — dan:research skill execution_flow with recursive loop, researcher and synthesizer agent enhancements
 - [x] 03-03-PLAN.md — dan:discuss skill execution_flow with interactive interview protocol and CONTEXT.md output
 
 ### Phase 4: Verification and Quality
@@ -109,6 +109,6 @@ Phases execute in numeric order. Phases 2 and 3 can execute in parallel (indepen
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete | 2026-03-29 |
 | 2. Core Loop | 3/3 | Complete | 2026-03-29 |
-| 3. Research System | 2/3 | In Progress|  |
+| 3. Research System | 3/3 | Complete | 2026-03-29 |
 | 4. Verification and Quality | 0/2 | Not started | - |
 | 5. Autonomy and Execution | 0/3 | Not started | - |
