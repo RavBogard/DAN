@@ -51,6 +51,8 @@ Recent decisions affecting current work:
 - [01-04]: Researcher uses haiku model (breadth over depth for exploration)
 - [01-04]: Verifier uses sonnet model (verification is pattern-matching, not creative)
 - [01-04]: Qualifier and verifier enforced read-only (no Write/Edit) for grading independence
+- [01-03]: dan:status is the only skill with disable-model-invocation: false (auto-invocable by Claude)
+- [01-03]: dan-workflow is a context skill (no colon in name), injected via agent-skills frontmatter
 
 ### Pending Todos
 

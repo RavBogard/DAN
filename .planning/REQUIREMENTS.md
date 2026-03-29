@@ -15,7 +15,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **FOUND-04**: CLI tools provide dependency analysis for plan execution ordering
 - [x] **FOUND-05**: File-based state in `.planning/` with defined schemas (PROJECT.md, STATE.md, ROADMAP.md, dan.config.json)
 - [x] **FOUND-06**: State files are human-readable markdown + JSON, git-tracked
-- [ ] **FOUND-07**: ~12 skill entry points installed under `.claude/skills/dan-*/` with frontmatter invocation control
+- [x] **FOUND-07**: ~12 skill entry points installed under `.claude/skills/dan-*/` with frontmatter invocation control
 - [x] **FOUND-08**: ~7 subagent definitions installed under `.claude/agents/` with tool restrictions and model selection per role
 - [x] **FOUND-09**: Two-level agent hierarchy enforced — commands/skills orchestrate, agents execute, no nested spawning
 - [ ] **FOUND-10**: Progress tracking in STATE.md with atomic updates per task completion
