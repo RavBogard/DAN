@@ -60,11 +60,14 @@ function main() {
     case 'milestone':
       require('./lib/milestone.cjs').handle(cwd, subArgs, raw);
       break;
+    case 'session':
+      require('./lib/session.cjs').handle(cwd, subArgs, raw);
+      break;
     default:
       error(
         'Unknown command: ' + (command || '(none)') +
         '\nUsage: dan-tools.cjs <command> [args]\n' +
-        'Commands: state, config, commit, frontmatter, template, dependency, phase, lifecycle, qualify, research, verify'
+        'Commands: state, config, commit, frontmatter, template, dependency, phase, lifecycle, qualify, research, verify, milestone, session'
       );
   }
 }
