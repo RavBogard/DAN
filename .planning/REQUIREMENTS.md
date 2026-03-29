@@ -63,8 +63,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **AUTO-03**: Roadmap-level approval gate — user can approve entire roadmap and DAN runs all milestones
 - [ ] **AUTO-04**: Wave-based parallel execution — dependency analysis groups independent plans into parallel waves
 - [ ] **AUTO-05**: Wave execution uses file-level partitioning to prevent state corruption (each agent writes own files, orchestrator merges)
-- [ ] **AUTO-06**: Session pause saves structured handoff to STATE.md with current position, context, and next action
-- [ ] **AUTO-07**: Session resume reads state files and restores full context without human re-explanation
+- [x] **AUTO-06**: Session pause saves structured handoff to STATE.md with current position, context, and next action
+- [x] **AUTO-07**: Session resume reads state files and restores full context without human re-explanation
 - [ ] **AUTO-08**: `/dan:status` shows current progress, phase position, and suggests next action
 - [ ] **AUTO-09**: Error recovery across phase boundaries — if a phase fails, DAN captures failure context and can retry or escalate
 
@@ -153,8 +153,8 @@ Deferred to future release. Tracked but not in current roadmap.
 | AUTO-03 | Phase 5 | Pending |
 | AUTO-04 | Phase 5 | Pending |
 | AUTO-05 | Phase 5 | Pending |
-| AUTO-06 | Phase 5 | Pending |
-| AUTO-07 | Phase 5 | Pending |
+| AUTO-06 | Phase 5 | Complete |
+| AUTO-07 | Phase 5 | Complete |
 | AUTO-08 | Phase 5 | Pending |
 | AUTO-09 | Phase 5 | Pending |
 
