@@ -31,7 +31,7 @@ DAN builds from the ground up: state schemas and CLI tools first (everything rea
 **Plans**: 4 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — CLI tools foundation: dan-tools.cjs router, core utilities, state/config/frontmatter/commit modules
+- [x] 01-01-PLAN.md — CLI tools foundation: dan-tools.cjs router, core utilities, state/config/frontmatter/commit modules
 - [ ] 01-02-PLAN.md — Template filling, dependency analysis, phase operations, and progress tracking
 - [ ] 01-03-PLAN.md — Skill entry points (12) and shared workflow skill
 - [ ] 01-04-PLAN.md — Agent definitions (7) with tool restrictions and two-level hierarchy
@@ -107,7 +107,7 @@ Phases execute in numeric order. Phases 2 and 3 can execute in parallel (indepen
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/4 | Not started | - |
+| 1. Foundation | 1/4 | In progress | - |
 | 2. Core Loop | 0/3 | Not started | - |
 | 3. Research System | 0/3 | Not started | - |
 | 4. Verification and Quality | 0/2 | Not started | - |

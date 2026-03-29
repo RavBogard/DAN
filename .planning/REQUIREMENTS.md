@@ -9,17 +9,17 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Foundation
 
-- [ ] **FOUND-01**: CLI tools library (dan-tools.cjs) provides atomic state read/write operations with JSON output for agent consumption
+- [x] **FOUND-01**: CLI tools library (dan-tools.cjs) provides atomic state read/write operations with JSON output for agent consumption
 - [ ] **FOUND-02**: CLI tools handle template filling from `.planning/` templates
-- [ ] **FOUND-03**: CLI tools provide atomic git commit operations (temp file + rename pattern for state safety)
+- [x] **FOUND-03**: CLI tools provide atomic git commit operations (temp file + rename pattern for state safety)
 - [ ] **FOUND-04**: CLI tools provide dependency analysis for plan execution ordering
-- [ ] **FOUND-05**: File-based state in `.planning/` with defined schemas (PROJECT.md, STATE.md, ROADMAP.md, dan.config.json)
-- [ ] **FOUND-06**: State files are human-readable markdown + JSON, git-tracked
+- [x] **FOUND-05**: File-based state in `.planning/` with defined schemas (PROJECT.md, STATE.md, ROADMAP.md, dan.config.json)
+- [x] **FOUND-06**: State files are human-readable markdown + JSON, git-tracked
 - [ ] **FOUND-07**: ~12 skill entry points installed under `.claude/skills/dan-*/` with frontmatter invocation control
 - [ ] **FOUND-08**: ~7 subagent definitions installed under `.claude/agents/` with tool restrictions and model selection per role
 - [ ] **FOUND-09**: Two-level agent hierarchy enforced — commands/skills orchestrate, agents execute, no nested spawning
 - [ ] **FOUND-10**: Progress tracking in STATE.md with atomic updates per task completion
-- [ ] **FOUND-11**: dan.config.json stores simplified preferences (mode, granularity, autonomy level, model profile)
+- [x] **FOUND-11**: dan.config.json stores simplified preferences (mode, granularity, autonomy level, model profile)
 
 ### Research System
 
@@ -111,17 +111,17 @@ Deferred to future release. Tracked but not in current roadmap.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase 1 | Pending |
+| FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Pending |
-| FOUND-03 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 1 | Pending |
-| FOUND-05 | Phase 1 | Pending |
-| FOUND-06 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Complete |
+| FOUND-06 | Phase 1 | Complete |
 | FOUND-07 | Phase 1 | Pending |
 | FOUND-08 | Phase 1 | Pending |
 | FOUND-09 | Phase 1 | Pending |
 | FOUND-10 | Phase 1 | Pending |
-| FOUND-11 | Phase 1 | Pending |
+| FOUND-11 | Phase 1 | Complete |
 | LOOP-01 | Phase 2 | Pending |
 | LOOP-02 | Phase 2 | Pending |
 | LOOP-03 | Phase 2 | Pending |
