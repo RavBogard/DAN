@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Completed 05-03-PLAN.md (Session pause/resume skills)
-last_updated: "2026-03-29T17:16:37.467Z"
-last_activity: 2026-03-29 -- Completed plan 05-03 session pause/resume skills
+stopped_at: Completed 05-02-PLAN.md (Skill execution flows - dan:milestone, dan:status)
+last_updated: "2026-03-29T17:16:38Z"
+last_activity: 2026-03-29 -- Completed plan 05-02 skill execution flows (dan:milestone, dan:status)
 progress:
   total_phases: 5
   completed_phases: 4
@@ -26,18 +26,18 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 5 of 5 (Autonomy and Execution)
-Plan: 3 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: in_progress
-Last activity: 2026-03-29 -- Completed plan 05-03 session pause/resume skills
+Last activity: 2026-03-29 -- Completed plan 05-02 skill execution flows (dan:milestone, dan:status)
 
-Progress: [█████████░] 93%
+Progress: [█████████.] 93%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 13
-- Average duration: 3.5min
-- Total execution time: 0.77 hours
+- Total plans completed: 14
+- Average duration: 3.4min
+- Total execution time: 0.80 hours
 
 **By Phase:**
 
@@ -47,14 +47,13 @@ Progress: [█████████░] 93%
 | 2-Core Loop | 3 | 10min | 3.3min |
 | 3-Research System | 3 | 7min | 2.3min |
 | 4-Verification | 2 | 11min | 5.5min |
-| 5-Autonomy | 1 | 5min | 5min |
+| 5-Autonomy | 2 | 8min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: 2min, 3min, 7min, 4min, 5min
+- Last 5 plans: 3min, 7min, 4min, 5min, 3min
 - Trend: stable
 
 *Updated after each plan completion*
-| Phase 05 P03 | 2min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -105,8 +104,10 @@ Recent decisions affecting current work:
 - [05-01]: determineNextAction uses 8-priority state machine for next-skill routing
 - [05-01]: Wave partitioning validates file overlap within same wave only (cross-wave is allowed)
 - [04-02]: Verifier includes stub detection patterns (TODO, TBD, hardcoded returns, trivially small files)
-- [Phase 05]: Pause captures 5 position fields: phase, plan, task, stage, wave
-- [Phase 05]: Resume maps pipeline_stage to skill via 6-entry lookup table
+- [05-02]: Single approval gate at milestone start; no further human interaction unless error escalation
+- [05-02]: Wave parallelism gated on validate-wave partitioning check; fallback to sequential on conflicts
+- [05-02]: Phase retry cap of 1 per failed stage; second failure forces user decision
+- [05-02]: dan:status remains read-only and auto-invocable (disable-model-invocation: false)
 
 ### Pending Todos
 
@@ -120,6 +121,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T17:16:32.470Z
-Stopped at: Completed 05-03-PLAN.md (Session pause/resume skills)
+Last session: 2026-03-29T17:16:38Z
+Stopped at: Completed 05-02-PLAN.md (Skill execution flows - dan:milestone, dan:status)
 Resume file: None

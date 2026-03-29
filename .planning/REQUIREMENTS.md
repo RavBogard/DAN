@@ -58,15 +58,15 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Autonomy & Execution
 
-- [ ] **AUTO-01**: `/dan:milestone` chains full pipeline: research → plan → apply → unify → verify → bugsweep for all phases in milestone
-- [ ] **AUTO-02**: Milestone-level approval gate — user approves scope/roadmap once, then DAN runs autonomously
-- [ ] **AUTO-03**: Roadmap-level approval gate — user can approve entire roadmap and DAN runs all milestones
-- [ ] **AUTO-04**: Wave-based parallel execution — dependency analysis groups independent plans into parallel waves
-- [ ] **AUTO-05**: Wave execution uses file-level partitioning to prevent state corruption (each agent writes own files, orchestrator merges)
+- [x] **AUTO-01**: `/dan:milestone` chains full pipeline: research → plan → apply → unify → verify → bugsweep for all phases in milestone
+- [x] **AUTO-02**: Milestone-level approval gate — user approves scope/roadmap once, then DAN runs autonomously
+- [x] **AUTO-03**: Roadmap-level approval gate — user can approve entire roadmap and DAN runs all milestones
+- [x] **AUTO-04**: Wave-based parallel execution — dependency analysis groups independent plans into parallel waves
+- [x] **AUTO-05**: Wave execution uses file-level partitioning to prevent state corruption (each agent writes own files, orchestrator merges)
 - [x] **AUTO-06**: Session pause saves structured handoff to STATE.md with current position, context, and next action
 - [x] **AUTO-07**: Session resume reads state files and restores full context without human re-explanation
-- [ ] **AUTO-08**: `/dan:status` shows current progress, phase position, and suggests next action
-- [ ] **AUTO-09**: Error recovery across phase boundaries — if a phase fails, DAN captures failure context and can retry or escalate
+- [x] **AUTO-08**: `/dan:status` shows current progress, phase position, and suggests next action
+- [x] **AUTO-09**: Error recovery across phase boundaries — if a phase fails, DAN captures failure context and can retry or escalate
 
 ## v2 Requirements
 
@@ -148,15 +148,15 @@ Deferred to future release. Tracked but not in current roadmap.
 | QUAL-04 | Phase 4 | Complete |
 | QUAL-05 | Phase 4 | Complete |
 | QUAL-06 | Phase 4 | Complete |
-| AUTO-01 | Phase 5 | Pending |
-| AUTO-02 | Phase 5 | Pending |
-| AUTO-03 | Phase 5 | Pending |
-| AUTO-04 | Phase 5 | Pending |
-| AUTO-05 | Phase 5 | Pending |
+| AUTO-01 | Phase 5 | Complete |
+| AUTO-02 | Phase 5 | Complete |
+| AUTO-03 | Phase 5 | Complete |
+| AUTO-04 | Phase 5 | Complete |
+| AUTO-05 | Phase 5 | Complete |
 | AUTO-06 | Phase 5 | Complete |
 | AUTO-07 | Phase 5 | Complete |
-| AUTO-08 | Phase 5 | Pending |
-| AUTO-09 | Phase 5 | Pending |
+| AUTO-08 | Phase 5 | Complete |
+| AUTO-09 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 46 total (FOUND: 11, LOOP: 11, RSRCH: 9, QUAL: 6, AUTO: 9)
