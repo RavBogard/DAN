@@ -42,11 +42,14 @@ function main() {
     case 'dependency':
       require('./lib/dependency.cjs').handle(cwd, subArgs, raw);
       break;
+    case 'phase':
+      require('./lib/phase.cjs').handle(cwd, subArgs, raw);
+      break;
     default:
       error(
         'Unknown command: ' + (command || '(none)') +
         '\nUsage: dan-tools.cjs <command> [args]\n' +
-        'Commands: state, config, commit, frontmatter, template, dependency'
+        'Commands: state, config, commit, frontmatter, template, dependency, phase'
       );
   }
 }
