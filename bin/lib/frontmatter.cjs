@@ -3,7 +3,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { output, error } = require('./core.cjs');
+const { output, error, atomicWriteFileSync } = require('./core.cjs');
 
 /**
  * Parse a YAML value string into a JS value.
@@ -197,9 +197,38 @@ function handle(cwd, args, raw) {
       break;
     }
 
+    case 'set': {
+      const filePath = args[1];
+      const field = args[2];
+      const value = args[3];
+      if (!filePath || !field || value === undefined) {
+        error('Usage: dan-tools.cjs frontmatter set <file> <field> <value>');
+      }
+      const resolvedPath = path.isAbsolute(filePath) ? filePath : path.join(cwd, filePath);
+      if (!fs.existsSync(resolvedPath)) error('File not found: ' + resolvedPath);
+      const content = fs.readFileSync(resolvedPath, 'utf-8');
+      const { frontmatter: fm, body } = parse(content);
+
+      // Support dot-notation for nested fields (e.g., must_haves.truths)
+      const parts = field.split('.');
+      let target = fm;
+      for (let i = 0; i < parts.length - 1; i++) {
+        if (target[parts[i]] === undefined || target[parts[i]] === null || typeof target[parts[i]] !== 'object') {
+          target[parts[i]] = {};
+        }
+        target = target[parts[i]];
+      }
+      target[parts[parts.length - 1]] = parseYamlValue(value);
+
+      const updated = serialize(fm, body);
+      atomicWriteFileSync(resolvedPath, updated);
+      output({ updated: true, field, value: target[parts[parts.length - 1]], frontmatter: fm }, raw);
+      break;
+    }
+
     default:
-      error('Unknown frontmatter subcommand: ' + subcommand + '. Use: parse, serialize');
+      error('Unknown frontmatter subcommand: ' + subcommand + '. Use: parse, serialize, set');
   }
 }
 
-module.exports = { handle, parse, serialize };
+module.exports = { handle, parse, serialize, parseYamlValue };

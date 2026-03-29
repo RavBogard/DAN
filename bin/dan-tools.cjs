@@ -45,11 +45,17 @@ function main() {
     case 'phase':
       require('./lib/phase.cjs').handle(cwd, subArgs, raw);
       break;
+    case 'lifecycle':
+      require('./lib/lifecycle.cjs').handle(cwd, subArgs, raw);
+      break;
+    case 'qualify':
+      require('./lib/qualify.cjs').handle(cwd, subArgs, raw);
+      break;
     default:
       error(
         'Unknown command: ' + (command || '(none)') +
         '\nUsage: dan-tools.cjs <command> [args]\n' +
-        'Commands: state, config, commit, frontmatter, template, dependency, phase'
+        'Commands: state, config, commit, frontmatter, template, dependency, phase, lifecycle, qualify'
       );
   }
 }

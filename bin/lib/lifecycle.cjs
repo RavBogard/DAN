@@ -64,7 +64,39 @@ function isTerminal(state) {
   return Array.isArray(transitions) && transitions.length === 0;
 }
 
+const { output, error } = require('./core.cjs');
+
+/**
+ * Handle lifecycle subcommands from CLI router.
+ */
+function handle(cwd, args, raw) {
+  const subcommand = args[0];
+
+  if (!subcommand) {
+    error('Usage: dan-tools.cjs lifecycle <validate|next> [args]');
+  }
+
+  switch (subcommand) {
+    case 'validate': {
+      const from = args[1];
+      const to = args[2];
+      if (!from || !to) error('Usage: dan-tools.cjs lifecycle validate <from-state> <to-state>');
+      output(validateTransition(from, to), raw);
+      break;
+    }
+    case 'next': {
+      const state = args[1];
+      if (!state) error('Usage: dan-tools.cjs lifecycle next <state>');
+      output(getNextStates(state), raw);
+      break;
+    }
+    default:
+      error('Unknown lifecycle subcommand: ' + subcommand + '. Use: validate, next');
+  }
+}
+
 module.exports = {
+  handle,
   PLAN_STATES,
   VALID_TRANSITIONS,
   validateTransition,

@@ -163,7 +163,65 @@ function classifyFailure(taskSpec, qualifierEvidence, objectiveText) {
   };
 }
 
+const fs = require('fs');
+const path = require('path');
+const { output, error } = require('./core.cjs');
+
+/**
+ * Handle qualify subcommands from CLI router.
+ */
+function handle(cwd, args, raw) {
+  const subcommand = args[0];
+
+  if (!subcommand) {
+    error('Usage: dan-tools.cjs qualify <parse|should-retry|classify> [args]');
+  }
+
+  switch (subcommand) {
+    case 'parse': {
+      const fileArg = args[1];
+      if (!fileArg) error('Usage: dan-tools.cjs qualify parse <file>');
+      const filePath = path.isAbsolute(fileArg) ? fileArg : path.join(cwd, fileArg);
+      if (!fs.existsSync(filePath)) error('File not found: ' + filePath);
+      const content = fs.readFileSync(filePath, 'utf-8');
+      output(parseQualifierOutput(content), raw);
+      break;
+    }
+    case 'should-retry': {
+      const status = args[1];
+      const retryCount = args[2];
+      const maxRetries = args[3];
+      if (!status || retryCount === undefined) {
+        error('Usage: dan-tools.cjs qualify should-retry <status> <retry-count> [max-retries]');
+      }
+      const count = parseInt(retryCount, 10);
+      const max = maxRetries !== undefined ? parseInt(maxRetries, 10) : undefined;
+      output(shouldRetry(status, count, max), raw);
+      break;
+    }
+    case 'classify': {
+      const taskSpecFile = args[1];
+      const evidenceFile = args[2];
+      const objectiveText = args[3] || '';
+      if (!taskSpecFile || !evidenceFile) {
+        error('Usage: dan-tools.cjs qualify classify <task-spec-file> <qualifier-evidence-file> [objective-text]');
+      }
+      const specPath = path.isAbsolute(taskSpecFile) ? taskSpecFile : path.join(cwd, taskSpecFile);
+      const evidPath = path.isAbsolute(evidenceFile) ? evidenceFile : path.join(cwd, evidenceFile);
+      if (!fs.existsSync(specPath)) error('File not found: ' + specPath);
+      if (!fs.existsSync(evidPath)) error('File not found: ' + evidPath);
+      const spec = fs.readFileSync(specPath, 'utf-8');
+      const evidence = fs.readFileSync(evidPath, 'utf-8');
+      output(classifyFailure(spec, evidence, objectiveText), raw);
+      break;
+    }
+    default:
+      error('Unknown qualify subcommand: ' + subcommand + '. Use: parse, should-retry, classify');
+  }
+}
+
 module.exports = {
+  handle,
   QUALIFICATION_STATUSES,
   parseQualifierOutput,
   shouldRetry,
