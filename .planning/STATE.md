@@ -25,29 +25,29 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 
 ## Current Position
 
-Phase: 2 of 5 (Core Loop)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-03-29 -- Completed plan 02-02 plan and unify skill workflows
+Phase: 2 of 5 (Core Loop) -- COMPLETE
+Plan: 3 of 3 in current phase
+Status: Complete
+Last activity: 2026-03-29 -- Completed plan 02-03 apply skill E/Q loop
 
-Progress: [=========-] 86%
+Progress: [==========] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
-- Average duration: 4min
-- Total execution time: 0.33 hours
+- Total plans completed: 7
+- Average duration: 3.7min
+- Total execution time: 0.43 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1-Foundation | 3 | 13min | 4.3min |
-| 2-Core Loop | 2 | 7min | 3.5min |
+| 2-Core Loop | 3 | 10min | 3.3min |
 
 **Recent Trend:**
-- Last 5 plans: 6min, 3min, 4min, 4min, 3min
+- Last 5 plans: 3min, 4min, 4min, 3min, 3min
 - Trend: stable
 
 *Updated after each plan completion*
@@ -78,6 +78,9 @@ Recent decisions affecting current work:
 - [02-02]: Orphan detection treats DRAFT plans as overwritable (not blocking) since they were never approved
 - [02-02]: dan:unify runs in-session (no agent spawn) -- reads files and produces summary, no creative generation needed
 - [02-02]: Planner agent sizing rules: 2-3 tasks/plan, 15-60 min/task, 5 files/task as hard limits
+- [02-03]: In-session execution default for apply; executor agent is future-prep for Phase 5 wave parallelization
+- [02-03]: Retry counts persist to STATE.md via state patch to survive session restarts
+- [02-03]: Diagnostic classification (intent/spec/code) always runs before any fix attempt on FAIL
 
 ### Pending Todos
 
@@ -92,5 +95,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-29
-Stopped at: Completed 02-02-PLAN.md (Plan and unify skill workflows)
+Stopped at: Completed 02-03-PLAN.md (Apply skill E/Q loop)
 Resume file: None
