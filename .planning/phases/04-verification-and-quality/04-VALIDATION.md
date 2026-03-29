@@ -37,7 +37,7 @@ created: 2026-03-29
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | Status |
 |---------|------|------|-------------|-----------|-------------------|--------|
 | 4-01-01 | 01 | 1 | QUAL-01, QUAL-06 | unit | `node --test bin/tests/test-verify.cjs` | ⬜ pending |
-| 4-01-02 | 01 | 1 | QUAL-04, QUAL-05 | unit | `node --test bin/tests/test-bugsweep.cjs` | ⬜ pending |
+| 4-01-02 | 01 | 1 | QUAL-04, QUAL-05 | integration | `node --test bin/tests/` | ⬜ pending |
 | 4-02-01 | 02 | 2 | QUAL-01, QUAL-02 | grep | `grep -q "check_must_haves" .claude/skills/dan-verify/SKILL.md && grep -q "write_verification" .claude/skills/dan-verify/SKILL.md` | ⬜ pending |
 | 4-02-02 | 02 | 2 | QUAL-03, QUAL-04, QUAL-05 | grep | `grep -q "bugsweep_loop" .claude/skills/dan-bugsweep/SKILL.md && grep -q "escalate" .claude/skills/dan-bugsweep/SKILL.md` | ⬜ pending |
 
@@ -47,9 +47,10 @@ created: 2026-03-29
 
 ## Wave 0 Requirements
 
-All Wave 0 test files created by Plan 01 tasks (TDD):
-- [x] `bin/tests/test-verify.cjs` — stubs for QUAL-01, QUAL-06 (verification checks)
-- [x] `bin/tests/test-bugsweep.cjs` — stubs for QUAL-04, QUAL-05 (cycle tracking, diminishing returns)
+All Wave 0 test files created by Plan 01, Task 1 (TDD):
+- [x] `bin/tests/test-verify.cjs` — covers QUAL-01, QUAL-04, QUAL-05, QUAL-06 (verification checks, fingerprinting, diminishing returns, report formatting)
+
+Bugsweep cycle/fingerprint behaviors consolidated into test-verify.cjs (all logic lives in verify.cjs module).
 
 ---
 
