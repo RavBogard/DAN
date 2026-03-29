@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 ## Current Position
 
 Phase: 1 of 5 (Foundation)
-Plan: 1 of 4 in current phase
+Plan: 4 of 4 in current phase
 Status: In progress
-Last activity: 2026-03-29 -- Completed 01-01 CLI tools foundation
+Last activity: 2026-03-29 -- Completed 01-04 Agent definitions
 
-Progress: [==........] 7%
+Progress: [==........] 13%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 6min
-- Total execution time: 0.1 hours
+- Total plans completed: 3
+- Average duration: 4.3min
+- Total execution time: 0.22 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1-Foundation | 1 | 6min | 6min |
+| 1-Foundation | 3 | 13min | 4.3min |
 
 **Recent Trend:**
-- Last 5 plans: 6min
-- Trend: baseline
+- Last 5 plans: 6min, 3min, 4min
+- Trend: improving
 
 *Updated after each plan completion*
 
@@ -48,6 +48,9 @@ Recent decisions affecting current work:
 - [01-01]: Used execFileSync (not execSync) for git operations to prevent shell injection
 - [01-01]: YAML parser preserves zero-prefixed numbers as strings (01 stays "01")
 - [01-01]: True atomic writes (temp+rename) implemented, unlike GSD's plain writeFileSync
+- [01-04]: Researcher uses haiku model (breadth over depth for exploration)
+- [01-04]: Verifier uses sonnet model (verification is pattern-matching, not creative)
+- [01-04]: Qualifier and verifier enforced read-only (no Write/Edit) for grading independence
 
 ### Pending Todos
 
@@ -62,5 +65,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-29
-Stopped at: Completed 01-01-PLAN.md (CLI tools foundation)
+Stopped at: Completed 01-04-PLAN.md (Agent definitions)
 Resume file: None
