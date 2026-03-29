@@ -12,9 +12,9 @@ See: .planning/PROJECT.md (updated 2026-03-28)
 Phase: 1 of 5 (Foundation)
 Plan: 4 of 4 in current phase
 Status: In progress
-Last activity: 2026-03-29 -- Completed 01-04 Agent definitions
+Last activity: 2026-03-29 -- Completed plan 01-02 template, dependency & phase modules
 
-Progress: [==........] 13%
+Progress: [==========] 100%
 
 ## Performance Metrics
 
@@ -53,6 +53,9 @@ Recent decisions affecting current work:
 - [01-04]: Qualifier and verifier enforced read-only (no Write/Edit) for grading independence
 - [01-03]: dan:status is the only skill with disable-model-invocation: false (auto-invocable by Claude)
 - [01-03]: dan-workflow is a context skill (no colon in name), injected via agent-skills frontmatter
+- [01-02]: Kahn's algorithm for topological sort (deterministic, natural cycle detection)
+- [01-02]: Templates use __dirname-relative paths (works regardless of cwd)
+- [01-02]: Progress bar width fixed at 10 characters for consistency
 
 ### Pending Todos
 
@@ -67,5 +70,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-29
-Stopped at: Completed 01-04-PLAN.md (Agent definitions)
+Stopped at: Completed 01-02-PLAN.md (Template, dependency & phase modules)
 Resume file: None
