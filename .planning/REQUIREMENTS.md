@@ -122,15 +122,6 @@ Deferred to future release. Tracked but not in current roadmap.
 | FOUND-09 | Phase 1 | Pending |
 | FOUND-10 | Phase 1 | Pending |
 | FOUND-11 | Phase 1 | Pending |
-| RSRCH-01 | Phase 3 | Pending |
-| RSRCH-02 | Phase 3 | Pending |
-| RSRCH-03 | Phase 3 | Pending |
-| RSRCH-04 | Phase 3 | Pending |
-| RSRCH-05 | Phase 3 | Pending |
-| RSRCH-06 | Phase 3 | Pending |
-| RSRCH-07 | Phase 3 | Pending |
-| RSRCH-08 | Phase 3 | Pending |
-| RSRCH-09 | Phase 3 | Pending |
 | LOOP-01 | Phase 2 | Pending |
 | LOOP-02 | Phase 2 | Pending |
 | LOOP-03 | Phase 2 | Pending |
@@ -142,6 +133,15 @@ Deferred to future release. Tracked but not in current roadmap.
 | LOOP-09 | Phase 2 | Pending |
 | LOOP-10 | Phase 2 | Pending |
 | LOOP-11 | Phase 2 | Pending |
+| RSRCH-01 | Phase 3 | Pending |
+| RSRCH-02 | Phase 3 | Pending |
+| RSRCH-03 | Phase 3 | Pending |
+| RSRCH-04 | Phase 3 | Pending |
+| RSRCH-05 | Phase 3 | Pending |
+| RSRCH-06 | Phase 3 | Pending |
+| RSRCH-07 | Phase 3 | Pending |
+| RSRCH-08 | Phase 3 | Pending |
+| RSRCH-09 | Phase 3 | Pending |
 | QUAL-01 | Phase 4 | Pending |
 | QUAL-02 | Phase 4 | Pending |
 | QUAL-03 | Phase 4 | Pending |
@@ -159,10 +159,10 @@ Deferred to future release. Tracked but not in current roadmap.
 | AUTO-09 | Phase 5 | Pending |
 
 **Coverage:**
-- v1 requirements: 42 total
-- Mapped to phases: 42
-- Unmapped: 0 ✓
+- v1 requirements: 46 total (FOUND: 11, LOOP: 11, RSRCH: 9, QUAL: 6, AUTO: 9)
+- Mapped to phases: 46
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-28*
-*Last updated: 2026-03-28 after initial definition*
+*Last updated: 2026-03-28 after roadmap creation*
