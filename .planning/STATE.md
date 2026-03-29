@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: Completed 04-02-PLAN.md (Skill and agent enhancement)
+status: in_progress
+stopped_at: Completed 05-01-PLAN.md (Milestone and session CLI modules)
 last_updated: "2026-03-29T16:41:53.920Z"
 last_activity: 2026-03-29 -- Completed plan 04-02 skill and agent enhancement
 progress:
   total_phases: 5
   completed_phases: 4
-  total_plans: 12
-  completed_plans: 12
-  percent: 100
+  total_plans: 15
+  completed_plans: 13
+  percent: 87
 ---
 
 # Project State
@@ -21,23 +21,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-28)
 
 **Core value:** Research 5x, build once. Human labor happens upfront. Everything after approval is autonomous.
-**Current focus:** Phase 4 - Verification and Quality
+**Current focus:** Phase 5 - Autonomy and Execution
 
 ## Current Position
 
-Phase: 4 of 5 (Verification and Quality)
-Plan: 2 of 2 in current phase
-Status: Phase 4 complete
-Last activity: 2026-03-29 -- Completed plan 04-02 skill and agent enhancement
+Phase: 5 of 5 (Autonomy and Execution)
+Plan: 1 of 3 in current phase
+Status: in_progress
+Last activity: 2026-03-29 -- Completed plan 05-01 milestone and session CLI modules
 
-Progress: [██████████] 100%
+Progress: [████████..] 81%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
-- Average duration: 3.4min
-- Total execution time: 0.72 hours
+- Total plans completed: 13
+- Average duration: 3.5min
+- Total execution time: 0.77 hours
 
 **By Phase:**
 
@@ -47,9 +47,10 @@ Progress: [██████████] 100%
 | 2-Core Loop | 3 | 10min | 3.3min |
 | 3-Research System | 3 | 7min | 2.3min |
 | 4-Verification | 2 | 11min | 5.5min |
+| 5-Autonomy | 1 | 5min | 5min |
 
 **Recent Trend:**
-- Last 5 plans: 3min, 2min, 3min, 7min, 4min
+- Last 5 plans: 2min, 3min, 7min, 4min, 5min
 - Trend: stable
 
 *Updated after each plan completion*
@@ -98,6 +99,10 @@ Recent decisions affecting current work:
 - [04-01]: Fingerprint normalization: lowercase, strip line numbers, normalize whitespace, normalize string literals
 - [04-02]: Verify skill references CLI tools for all deterministic checks (no inline verification logic in agent prompts)
 - [04-02]: Bugsweep loop orchestrated at skill level, not agent level (two-level hierarchy rule)
+- [05-01]: Flat pipeline_* frontmatter keys (not nested YAML) for session position serialization
+- [05-01]: getPipelineOrder parses ROADMAP.md phase dependency lines and topologically sorts
+- [05-01]: determineNextAction uses 8-priority state machine for next-skill routing
+- [05-01]: Wave partitioning validates file overlap within same wave only (cross-wave is allowed)
 - [04-02]: Verifier includes stub detection patterns (TODO, TBD, hardcoded returns, trivially small files)
 
 ### Pending Todos
@@ -113,5 +118,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-29
-Stopped at: Completed 04-02-PLAN.md (Skill and agent enhancement)
+Stopped at: Completed 05-01-PLAN.md (Milestone and session CLI modules)
 Resume file: None

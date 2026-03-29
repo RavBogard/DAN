@@ -96,7 +96,7 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Milestone and session CLI modules (milestone.cjs, session.cjs) with TDD tests and router wiring
+- [x] 05-01-PLAN.md — Milestone and session CLI modules (milestone.cjs, session.cjs) with TDD tests and router wiring
 - [ ] 05-02-PLAN.md — dan:milestone and dan:status skill execution_flows with pipeline chaining and progress display
 - [ ] 05-03-PLAN.md — dan:pause and dan:resume skill execution_flows with session persistence
 
@@ -111,4 +111,4 @@ Phases execute in numeric order. Phases 2 and 3 can execute in parallel (indepen
 | 2. Core Loop | 3/3 | Complete | 2026-03-29 |
 | 3. Research System | 3/3 | Complete | 2026-03-29 |
 | 4. Verification and Quality | 2/2 | Complete   | 2026-03-29 |
-| 5. Autonomy and Execution | 0/3 | Not started | - |
+| 5. Autonomy and Execution | 1/3 | In progress | - |
