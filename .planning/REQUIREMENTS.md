@@ -29,8 +29,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **RSRCH-04**: Synthesizer agent merges findings into SUMMARY.md with confidence assessments and gap identification
 - [x] **RSRCH-05**: Gap detection drives subsequent research passes — only unresolved gaps get re-researched
 - [x] **RSRCH-06**: Research terminates when gap count trends to zero or confidence reaches HIGH across all dimensions
-- [ ] **RSRCH-07**: `/dan:discuss` runs deep interview phase that surfaces decisions, tradeoffs, and assumptions
-- [ ] **RSRCH-08**: Discuss phase captures structured decision log in CONTEXT.md per phase
+- [x] **RSRCH-07**: `/dan:discuss` runs deep interview phase that surfaces decisions, tradeoffs, and assumptions
+- [x] **RSRCH-08**: Discuss phase captures structured decision log in CONTEXT.md per phase
 - [ ] **RSRCH-09**: Project-level init research runs 4 parallel researchers (same as GSD pattern)
 
 ### Core Loop
@@ -139,8 +139,8 @@ Deferred to future release. Tracked but not in current roadmap.
 | RSRCH-04 | Phase 3 | Pending |
 | RSRCH-05 | Phase 3 | Complete |
 | RSRCH-06 | Phase 3 | Complete |
-| RSRCH-07 | Phase 3 | Pending |
-| RSRCH-08 | Phase 3 | Pending |
+| RSRCH-07 | Phase 3 | Complete |
+| RSRCH-08 | Phase 3 | Complete |
 | RSRCH-09 | Phase 3 | Pending |
 | QUAL-01 | Phase 4 | Pending |
 | QUAL-02 | Phase 4 | Pending |

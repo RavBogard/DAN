@@ -85,6 +85,10 @@ Recent decisions affecting current work:
 - [03-01]: Convergence checks run in priority order: hard cap > no gaps > all HIGH > diminishing returns
 - [03-01]: Phase target resolution uses zero-padded prefix matching against phases directory
 - [03-01]: Router wiring done in same commit as module when tests require both
+- [03-03]: Discuss skill runs in-session (no agent spawn) -- the skill IS the interviewer
+- [03-03]: Gray areas limited to 3-7 per phase to prevent analysis paralysis
+- [03-03]: Scope guardrail test: "Does this clarify HOW or add new capability?"
+- [03-03]: Prior decisions from STATE.md are settled -- never re-litigated unless user explicitly requests
 
 ### Pending Todos
 
@@ -99,5 +103,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-29
-Stopped at: Completed 03-01-PLAN.md (Research state tracking)
+Stopped at: Completed 03-03-PLAN.md (Discuss skill interview protocol)
 Resume file: None

@@ -65,9 +65,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Research CLI module (init, record-pass, check-convergence, status) with tests and router wiring
+- [x] 03-01-PLAN.md — Research CLI module (init, record-pass, check-convergence, status) with tests and router wiring
 - [ ] 03-02-PLAN.md — dan:research skill execution_flow with recursive loop, researcher and synthesizer agent enhancements
-- [ ] 03-03-PLAN.md — dan:discuss skill execution_flow with interactive interview protocol and CONTEXT.md output
+- [x] 03-03-PLAN.md — dan:discuss skill execution_flow with interactive interview protocol and CONTEXT.md output
 
 ### Phase 4: Verification and Quality
 **Goal**: After any plan executes, DAN can autonomously verify deliverables against acceptance criteria and recursively sweep for bugs until clean
